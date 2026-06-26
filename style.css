@@ -586,3 +586,220 @@ h1 {
         font-size: 14px;
     }
 }
+
+
+/* Clickable service button */
+.service-button {
+    width: 100%;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.service-arrow {
+    margin-left: auto;
+    color: var(--accent-cyan);
+    opacity: 0.75;
+    transition: var(--transition);
+}
+
+.service-button:hover .service-arrow {
+    transform: translateX(4px);
+    opacity: 1;
+}
+
+/* GitHub projects */
+.projects {
+    background: var(--glass-highlight);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 36px 32px;
+    margin-bottom: 40px;
+    text-align: left;
+    animation: fadeInUp 1s ease-out 0.25s both;
+    transition: var(--transition);
+}
+
+.projects:hover {
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+}
+
+.projects h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.projects h2::before,
+.projects h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+    max-width: 60px;
+}
+
+.projects-subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.filter-btn {
+    font-family: inherit;
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    padding: 9px 15px;
+    color: var(--text-secondary);
+    background: rgba(255,255,255,0.03);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: var(--text-primary);
+    border-color: rgba(0, 242, 255, 0.35);
+    background: rgba(0, 242, 255, 0.08);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.08);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.project-card,
+.project-loading,
+.project-error,
+.project-empty {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.project-card {
+    display: flex;
+    min-height: 180px;
+    flex-direction: column;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 242, 255, 0.08), rgba(189, 52, 254, 0.08));
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 242, 255, 0.25);
+    box-shadow: 0 16px 34px rgba(0,0,0,0.25), 0 0 24px rgba(0, 242, 255, 0.08);
+}
+
+.project-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.project-name {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.project-description {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.project-tag {
+    border-radius: 999px;
+    padding: 5px 9px;
+    background: rgba(0, 242, 255, 0.08);
+    color: var(--accent-cyan);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--accent-cyan);
+}
+
+.project-loading,
+.project-error,
+.project-empty {
+    grid-column: 1 / -1;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.project-error a,
+.project-empty a {
+    color: var(--accent-cyan);
+}
+
+@media (max-width: 640px) {
+    .projects {
+        padding: 28px 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

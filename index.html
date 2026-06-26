@@ -42,15 +42,31 @@
                 <div class="service-icon">🌐</div>
                 <span>Создание сайтов (HTML, CSS, JavaScript)</span>
             </div>
-            <div class="service-item">
+            <button class="service-item service-button" type="button" onclick="showPythonProjects()" aria-label="Показать проекты на Python">
                 <div class="service-icon">🐍</div>
                 <span>Программирование на Python</span>
-            </div>
+                <span class="service-arrow">→</span>
+            </button>
             <div class="service-item">
                 <div class="service-icon">🎨</div>
                 <span>Веб-дизайн и верстка</span>
             </div>
         </div>
+
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <h2>Мои проекты с GitHub</h2>
+            <p class="projects-subtitle">Этот блок обновляется автоматически из публичных репозиториев GitHub.</p>
+
+            <div class="project-filters">
+                <button class="filter-btn active" type="button" data-filter="all" onclick="renderProjects('all')">Все</button>
+                <button class="filter-btn" type="button" data-filter="Python" onclick="renderProjects('Python')">Python</button>
+            </div>
+
+            <div class="project-grid" id="github-projects">
+                <div class="project-loading">Загружаю проекты...</div>
+            </div>
+        </section>
 
         <!-- Contacts -->
         <div class="contact-section">
@@ -66,7 +82,7 @@
                     <span class="copy-hint">Кликни для копирования</span>
                     <div class="contact-icon">✉️</div>
                     <div class="contact-label">Email</div>
-                    <div class="contact-value"><span class="__cf_email__" data-cfemail="d6b8b3a1b3a4bbbbbfe7e796b1bbb7bfbaf8b5b9bb">[email&#160;protected]</span></div>
+                    <div class="contact-value"><span class="__cf_email__" data-cfemail="7618130113041b1b1f474736111b171f1a5815191b">[email&#160;protected]</span></div>
                 </a>
             </div>
 
@@ -74,7 +90,7 @@
                 <a href="https://t.me/Helper31" class="social-btn" title="Telegram" target="_blank" rel="noopener">
                     <img src="telegram.svg" alt="Telegram">
                 </a>
-                <a href="https://github.com/GYSSI000" class="social-btn" title="GitHub" target="_blank" rel="noopener">
+                <a href="https://github.com/Helper31" class="social-btn" title="GitHub" target="_blank" rel="noopener">
                     <img src="github.svg" alt="GitHub">
                 </a>
             </div>
@@ -84,7 +100,6 @@
             <p>© 2026 Helper31 | Россия</p>
         </div>
     </div>
-
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a111b7eadbf89dd3',t:'MTc4MjM2Njg3NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a11a00d78d99e92c',t:'MTc4MjQ1Mzc0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
